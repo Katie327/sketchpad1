@@ -1,0 +1,15 @@
+#container{
+    height: 640px;
+    width: 640px;
+    z-index: 0;   
+}
+
+
+.box{
+    height: 36px;
+    width: 36px;
+    background-color: yellow;
+    z-index: 100;
+    display: inline-block;
+    border: 2px solid white;
+}
