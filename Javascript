@@ -1,6 +1,45 @@
-
 $(document).ready(function(){
-for (var i=0; i<256; i++){
-    $("#container").append("<div class='box'>");
-}
+
+var makeGrid = function(size){
+    
+    $("#container").append("<table>");
+    
+    for (var i=0; i<size; i++){
+        $("table").append("<tr>");
+    };//first add 16 rows
+    
+    for (var j=0; j<size; j++){
+        $("tr").append("<td>");
+    };    //then 16 columns
+    
+    $("td").append("<div class='box'>");
+        //then add a div to each cell
+    
+    $(".box").mouseenter(function(){
+       $(this).addClass("newBox");
+       });//changes a box class to newBox (which has background color blue) when mouse enters it
+};   
+    
+var size = 16;
+console.log(makeGrid(size));
+    
+$("button").click(function(){
+    size = prompt("How many squares?");
+    
+    if(size>0){
+        
+        $("table").remove();
+        console.log(makeGrid(size)); 
+        
+        
+    }else if(size<0){
+        confirm("Please choose a positive number");
+    }
+    else{
+        confirm("I'm sorry, I don't recognize that. Please choose a number");
+    };
 });
+    
+
+});
+
