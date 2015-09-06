@@ -1,15 +1,23 @@
 #container{
-    height: 640px;
-    width: 640px;
+    height: 800px;
+    width: 800px;
     z-index: 0;   
 }
 
+table{
+    width: 100%;
+    height: 100%;
+}
 
 .box{
-    height: 36px;
-    width: 36px;
+    height: 100%;
+    width: 100%;
     background-color: yellow;
     z-index: 100;
     display: inline-block;
-    border: 2px solid white;
 }
+
+.newBox{
+    background-color: blue;
+}
+
